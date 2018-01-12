@@ -1,6 +1,9 @@
+require 'pry'
 require 'appium_lib'
-require 'cucumber'
-require_relative '../../lib/budget_app'
+
+RSpec.configure do |config|
+  config.formatter = :documentation
+end
 
 def opts
   {
@@ -10,8 +13,5 @@ def opts
       app: "/Users/tech-a04/engineering/sparta-mobile-testing/native1/app/budgetwatch.apk"
     }
   }
+
 end
-
-Appium::Driver.new(opts, true)
-
-World(BudgetApp)
