@@ -16,6 +16,4 @@ class AddBudgetPage
   def save_budget
     @driver.find_element(:id, BUDGET_SAVE).click
   end
-
-
 end
